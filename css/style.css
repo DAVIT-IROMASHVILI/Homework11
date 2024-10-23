@@ -1,0 +1,228 @@
+    /* colors and styles */
+    @import url(variable.css);
+
+    /* Main_Container */
+    .container {
+        width: min(100%, 1440px);
+        padding: 32px 20px;
+        margin: auto;
+        background-color: var(--backgroundColor1);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 48px 146px 146px 220px;
+        gap: 48px 40px;
+        grid-template-areas:
+            "HEADER HEADER HEADER HEADER"
+            "ASIDE SECTION1 SECTION1 SECTION2"
+            "ASIDE SECTION1 SECTION1 SECTION3"
+            "CARD1 CARD2 CARD3 CARD4";
+    }
+
+    /* Header  */
+
+    header {
+        grid-area: HEADER;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_ul {
+        display: flex;
+        column-gap: 80px;
+    }
+
+    .li_link {
+        font-family: Inter;
+        font-size: var(--fontsize_1);
+        font-weight: 400;
+        line-height: 32px;
+        color: var(--backgroundColor3);
+        transition: all 0.5s;
+
+    }
+
+    .li_link:hover {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+
+    .header_section {
+        display: flex;
+        column-gap: 32px;
+    }
+
+    .header_button {
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: var(--backgroundColor2);
+        box-shadow: 0px 2px 4px -2px #DFD9D966 inset;
+        box-shadow: 0px 2px 4px 0px #00000033;
+    }
+
+    .header_button:active {
+        box-shadow: inset -3px -3px 3px rgb(233, 114, 114), inset 3px 3px 3px rgba(0, 0, 0, 0.452);
+    }
+
+    .fa-user {
+        color: var(--color_1);
+    }
+
+    .fa-cart-shopping {
+        color: var(--color_2);
+    }
+
+    /* aside */
+    aside {
+        grid-area: ASIDE;
+        background-color: var(--backgroundColor2);
+        padding: 38px 0 0 40px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 5px;
+        box-shadow: 0px 4px 4px 0px #00000033 inset;
+        box-shadow: 0px -1px 4px 0px #DFD9D966 inset;
+
+    }
+
+    .aside_header {
+        font-family: Inter;
+        font-size: var(--fontsize_2);
+        font-weight: 400;
+        line-height: 27px;
+        color: #C3B97F;
+        margin-bottom: 16px;
+    }
+
+    .aside_li_link {
+        font-family: Inter;
+        font-size: var(--fontsize_3);
+        font-weight: 400;
+        line-height: 25px;
+        color: #91B599;
+        transition: all 0.5s;
+    }
+
+    .aside_li_link:hover{
+        color: #ffffff;
+        letter-spacing: 2px;
+    }
+    
+
+
+    /* section1  */
+    .section_1 {
+        grid-area: SECTION1;
+        background: url(../images/section1.png);
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* section2 */
+    .section2 {
+        grid-area: SECTION2;
+        background: url(../images/section2.png);
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* section3 */
+    .section3 {
+        grid-area: SECTION3;
+        background: url(../images/section3.png);
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* CARDS */
+    .card1 {
+        grid-area: CARD1;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+
+    .card2 {
+        grid-area: CARD2;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+
+    .card3 {
+        grid-area: CARD3;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+
+    .card4 {
+        grid-area: CARD4;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+
+
+    .card1:hover{
+        box-shadow: 0 0 20px #20111181, 0 0 30px #20111181, 0 0 40px #20111181;
+    }
+    .card2:hover{
+        box-shadow: 0 0 20px #20111181, 0 0 30px #20111181, 0 0 40px #20111181;
+    }
+    .card3:hover{
+        box-shadow: 0 0 20px #20111181, 0 0 30px #20111181, 0 0 40px #20111181;
+    }
+    .card4:hover{
+        box-shadow: 0 0 20px #20111181, 0 0 30px #20111181, 0 0 40px #20111181;
+    }
+
+    .card_section {
+        height: 40px;
+        background-color: var(--backgroundColor3);
+        padding-left: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card_price {
+        font-family: Inter;
+        font-size: var(--fontsize_2);
+        font-weight: 700;
+        line-height: 24px;
+        color: #1C5550;
+    }
+
+    .card_button {
+        background-color: var(--color_2);
+        border: none;
+        height: 40px;
+        font-family: Inter;
+        font-size: var(--fontsize_3);
+        font-weight: 700;
+        line-height: 22px;
+        color: #DFD9D9;
+        cursor: pointer;
+    }
+
+    .card_button:active{
+        color: chocolate;
+        background-color: var(--backgroundColor2);
+        box-shadow: inset -3px -3px 3px #02010144, inset 3px 3px 3px #02010144;
+    }
+
+    .button_p {
+        font-family: Inter;
+        font-size: var(--fontsize_3);
+        font-weight: 700;
+        line-height: 22px;
+        color: #DFD9D9;
+    }
+
+    
